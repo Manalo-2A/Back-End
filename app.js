@@ -3,7 +3,10 @@ import express from 'express';
 import 'dotenv/config.js';
 import bookRoutes from './routers/BookRoutes.js';
 import studentRoutes from './routers/StudentRoutes.js';
+import userRoutes from './routers/UserRoutes.js';
 import cors from 'cors';
+
+
 
 let corsOptions = {
     origin: process.env.ORIGIN
@@ -29,3 +32,5 @@ try{
 // app.use("/students", studentRoutes);
 
 app.use("/book", bookRoutes)
+app.use("/user", userRoutes);
+
